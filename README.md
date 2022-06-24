@@ -2,4 +2,4 @@
   \
  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌꒰ ‌ 𝑒𝑥𝑝𝑙𝑜𝑟𝑎𝑡𝑖𝑜𝑛 ℎ𝑜𝑚𝑒 𝑝𝑎𝑔𝑒 : ‌ pooftie.me ‌ ꒱\
   \
-<img width="400" height="260" src="https://middlepot.com/img/pure.jpg">
+<img width="400" height="260" src="https://middlepot.com/img/virtual.jpg">
