@@ -740,7 +740,7 @@ randomizePhrase();
 <p onclick="window.open('https://middlepot.com');" style="cursor: url(https://i.imgur.com/E4u3XD8.png), progress;">𝑚𝑖𝑑𝑑𝑙𝑒𝑝𝑜𝑡.𝑐𝑜𝑚</p>
 </font>
 
-<img ondragstart="return false" id="crtimg" style="z-index:-3; position:absolute; left:218px; top:104px;"
+<img ondragstart="return false" onclick="return false" id="crtimg" style="z-index:-3; position:absolute; left:218px; top:104px;"
 src="https://i.imgur.com/octL8mu.png"/>
 
         <script type = "text/javascript">
@@ -773,11 +773,19 @@ src="https://i.imgur.com/octL8mu.png"/>
 <img ondragstart="return false" style="z-index:-5; position:absolute; left:50px; top:-20px;"
 src="https://i.imgur.com/96V0CMT.png"/>
 
+<script>
+var clickedDivGroups = [];
+function clickedDivGroup(e){
+  $(document).trigger('click');
+  return false;
+}
+</script>
+
 <div class="divGroup1">
 
 <div id="ascii" style="position:absolute; left:370px; top:260px;">
 <a class="hoverLink" target="_blank" href="https://ascii.pooftie.me/" aria-label="·˚ ⊹" style="text-decoration: none;">
-<img id="imgascii" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgascii" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/xuuOOUr.png"/>
 <img id="hoverascii" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/w6UXVY6.png"/></span>
@@ -786,7 +794,7 @@ width="250px" height="250px" src="https://i.imgur.com/xuuOOUr.png"/>
 
 <div id="div2006" style="position:absolute; left:550px; top:130px;">
 <a class="hoverLink" target="_blank" href="https://2006.pooftie.me" aria-label="ˢ ᵒ ᶠ  ᵗ" style="text-decoration: none;">
-<img id="img2006" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="img2006" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/UsltoLS.png"/>
 <img id="hover2006" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://2006.pooftie.me/img/favicon.png"/></span>
@@ -795,7 +803,7 @@ width="250px" height="250px" src="https://i.imgur.com/UsltoLS.png"/>
 
 <div id="utf8" style="position:absolute; left:650px; top:320px;">
 <a class="hoverLink" target="_blank" href="https://utf8.pooftie.me" aria-label="ﾕﾆｺ㌦" style="text-decoration: none;">
-<img id="imgutf8" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgutf8" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/0kBbPCk.png"/>
 <img id="hoverutf8" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/ooenwtN.png"/></span>
@@ -812,7 +820,7 @@ width="250px" height="250px" src="https://i.imgur.com/0kBbPCk.png"/>
 
 <div id="day" style="position:absolute; left:630px; top:130px;">
 <a class="hoverLink" target="_blank" href="https://day.pooftie.me" aria-label="rotininha" style="text-decoration: none;">
-<img id="imgday" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgday" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/QUg7gNE.png"/>
 <img id="hoverday" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/Fx4etO3.png"/></span>
@@ -821,7 +829,7 @@ width="250px" height="250px" src="https://i.imgur.com/QUg7gNE.png"/>
 
 <div id="soft" style="position:absolute; left:430px; top:220px;">
 <a class="hoverLink" target="_blank" href="https://soft.pooftie.me" aria-label="sofffffft" style="text-decoration: none;">
-<img id="imgsoft" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgsoft" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/vs6px71.png"/>
 <img id="hoversoft" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/9CdJJi5.png"/></span>
@@ -830,7 +838,7 @@ width="250px" height="250px" src="https://i.imgur.com/vs6px71.png"/>
 
 <div id="emoji" style="position:absolute; left:640px; top:320px;">
 <a class="hoverLink" target="_blank" href="https://emoji.pooftie.me" aria-label="꒱" style="text-decoration: none;">
-<img id="imgemoji" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgemoji" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/69W7EzW.png"/>
 <img id="hoveremoji" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/hoF37dF.png"/></span>
@@ -846,7 +854,7 @@ width="250px" height="250px" src="https://i.imgur.com/69W7EzW.png"/>
 
 <div id="teddy" style="position:absolute; left:700px; top:200px;">
 <a class="hoverLink" target="_blank" href="https://teddy.pooftie.me" aria-label="my virtual stuffie collection" style="text-decoration: none;">
-<img id="imgteddy" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgteddy" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/XjZirLZ.png"/>
 <img id="hoverteddy" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/3ElZxZA.png"/></span>
@@ -855,7 +863,7 @@ width="250px" height="250px" src="https://i.imgur.com/XjZirLZ.png"/>
 
 <div id="test" style="position:absolute; left:510px; top:280px;">
 <a class="hoverLink" target="_blank" href="https://test.pooftie.me" aria-label="test.html" style="text-decoration: none;">
-<img id="imgtest" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgtest" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/R3nFXHi.png"/>
 <img id="hovertest" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/OefoUcl.png"/></span>
@@ -864,7 +872,7 @@ width="250px" height="250px" src="https://i.imgur.com/R3nFXHi.png"/>
 
 <div id="file" style="position:absolute; left:340px; top:190px;">
 <a class="hoverLink" target="_blank" href="https://file.pooftie.me" aria-label="𝑚𝑒𝑚𝑜𝑟𝑖𝑒𝑠" style="text-decoration: none;">
-<img id="imgfile" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgfile" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/VX7mYCa.png"/>
 <img id="hoverfile" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/JGVvGYO.png"/></span>
@@ -880,7 +888,7 @@ width="250px" height="250px" src="https://i.imgur.com/VX7mYCa.png"/>
 
 <div id="div1997" style="position:absolute; left:690px; top:320px;">
 <a class="hoverLink" target="_blank" href="https://1997.pooftie.me" aria-label="1997box" style="text-decoration: none;">
-<img id="img1997" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="img1997" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/DWOUCSQ.png"/>
 <img id="hover1997" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/wxP09Yq.png"/></span>
@@ -889,7 +897,7 @@ width="250px" height="250px" src="https://i.imgur.com/DWOUCSQ.png"/>
 
 <div id="aes" style="position:absolute; left:360px; top:320px;">
 <a class="hoverLink" target="_blank" href="https://aes.pooftie.me" aria-label="aesthetic virtual journal" style="text-decoration: none;">
-<img id="imgaes" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgaes" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/qrUj0KI.png"/>
 <img id="hoveraes" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/pm02FUg.gif"/></span>
@@ -898,7 +906,7 @@ width="250px" height="250px" src="https://i.imgur.com/qrUj0KI.png"/>
 
 <div id="ch" style="position:absolute; left:530px; top:150px;">
 <a class="hoverLink" target="_blank" href="https://ch.pooftie.me" aria-label="ぷふちゃん" style="text-decoration: none;">
-<img id="imgch" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgch" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/Yo8m5t5.png"/>
 <img id="hoverch" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/gkmB83X.gif"/></span>
@@ -913,7 +921,7 @@ width="250px" height="250px" src="https://i.imgur.com/Yo8m5t5.png"/>
 
 <div id="dream" style="position:absolute; left:520px; top:270px;">
 <a class="hoverLink" target="_blank" href="https://dream.pooftie.me" aria-label=".. 𝖽𝗂𝗋𝖾𝖼𝗍𝗈𝗋𝗒" style="text-decoration: none;">
-<img id="imgdream" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgdream" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/n2tcPrD.png"/>
 <img id="hoverdream" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/54tny9l.png"/></span>
@@ -922,7 +930,7 @@ width="250px" height="250px" src="https://i.imgur.com/n2tcPrD.png"/>
 
 <div id="sozai" style="position:absolute; left:320px; top:140px;">
 <a class="hoverLink" target="_blank" href="https://sozai.pooftie.me" aria-label="そざい" style="text-decoration: none;">
-<img id="imgsozai" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgsozai" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/PAbGmKz.png"/>
 <img id="hoversozai" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/0C9WMHW.png"/></span>
@@ -931,7 +939,7 @@ width="250px" height="250px" src="https://i.imgur.com/PAbGmKz.png"/>
 
 <div id="tea" style="position:absolute; left:720px; top:290px;">
 <a class="hoverLink" target="_blank" href="https://tea.pooftie.me" aria-label="𝑡𝑒𝑎 𝑝𝑎𝑟𝑡𝑦 𝑤𝑒𝑎𝑡𝘩𝑒𝑟" style="text-decoration: none;">
-<img id="imgtea" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgtea" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/qrOjajo.png"/>
 <img id="hovertea" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/iEaX6CW.png"/></span>
@@ -947,7 +955,7 @@ width="250px" height="250px" src="https://i.imgur.com/qrOjajo.png"/>
 
 <div id="care" style="position:absolute; left:510px; top:250px;">
 <a class="hoverLink" target="_blank" href="https://care.pooftie.me" aria-label="𝑡𝑎𝑘𝑒 𝑐𝑎𝑟𝑒" style="text-decoration: none;">
-<img id="imgcare" onclick="return false" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgcare" onclick="return clickedDivGroup();" style="z-index:2; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/CSsQ3SD.png"/>
 <img id="hovercare" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/DcMGXJm.png"/></span>
@@ -956,7 +964,7 @@ width="250px" height="250px" src="https://i.imgur.com/CSsQ3SD.png"/>
 
 <div id="kafra" style="position:absolute; left:710px; top:260px;">
 <a class="hoverLink" target="_blank" href="https://kafra.pooftie.me" aria-label="향수의" style="text-decoration: none;">
-<img id="imgkafra" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgkafra" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/unAy0zT.png"/>
 <img id="hoverkafra" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/cRc2lWM.gif"/></span>
@@ -967,7 +975,7 @@ width="250px" height="250px" src="https://i.imgur.com/unAy0zT.png"/>
 <!--<a class="hoverLink" target="_blank" href="" aria-label="" style="text-decoration: none;">-->
 <style>#imgfrilly{opacity: 1; transition: opacity .3s;} #imgfrilly:hover {opacity: 0.5; transition: opacity .3s;}</style>
 <a class="hoverLink" aria-label="under construction !!">
-<img id="imgfrilly" onclick="return false" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+<img id="imgfrilly" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/cDb6Jh6.png"/>
 <img id="hoverfrilly" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
 <span><img height="16px" width="16px" src="https://i.imgur.com/9CdJJi5.png"/></span>
