@@ -773,11 +773,11 @@ src="https://i.imgur.com/octL8mu.png"/>
 <img ondragstart="return false" style="z-index:-5; position:absolute; left:50px; top:-20px;"
 src="https://i.imgur.com/96V0CMT.png"/>
 
-<a id="clickedDivGroupAnchor"></a>
+<div id="clickedDivGroupDiv" onclick="console.log('aaa')"></div>
 <script>
 var clickedDivGroups = [];
 function clickedDivGroup(e){
-  $('#clickedDivGroupAnchor').trigger('click');
+  document.getElementById('clickedDivGroupDiv').click();
   return false;
 }
 </script>
