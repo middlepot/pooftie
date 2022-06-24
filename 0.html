@@ -141,7 +141,7 @@ border: 1px dotted #e2d5d0;
 </style>
   <script type="text/javascript">
     $(function() {
-                $('body a').miniPreview();
+                $('body a:not(#dummyAnchor)').miniPreview();
             });
   </script>
   
@@ -697,7 +697,16 @@ html {
 
 <body oncontextmenu="return false" ondragstart="return false" style="background-image:url(https://i.imgur.com/yBDZKPx.png); background-repeat: repeat; overflow: hidden; background-color:#fefbfb; color:#fefbfb; font-family: Verdana; font-size: 10px;">
 
+
+<style>
+.dummyDiv:hover{
+  margin: 0;
+}
+</style>
+<div class="dummyDiv" id="dummyAnchor" onclick="console.log('aaaa');" style="width: 5000px; height: 2000px;">
+
 <div id="stuff">
+
 
 <div class="crt" style="z-index:2; position:absolute; left:677px; top:60px; display: flex; flex-direction: row-reverse;">
 <p class="typewriter" id="myRandomDiv"></p>
@@ -1030,6 +1039,9 @@ randomizeDivGroup();
 </script>
 
 </div>
+
+</div>
+
 </div>
 </body>
 
