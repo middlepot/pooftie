@@ -1,4 +1,4 @@
-# robots.txt for https://middlepot.com
+# robots.txt for https://pooftie.me
 
 User-agent: ia_archiver
 Disallow: /

@@ -201,11 +201,31 @@ border: 1px dotted #e2d5d0;
             });
             
             // scaling
-            var inversePercent = 100 / this.options.scale;
+            var vw = $(window).width();
+            var vh = $(window).height();
+            var isLandscape = (vw > vh);
+            var scaleToUse = this.options.scale;
+            if(isLandscape){
+                if(vw >= 3000){
+                    scaleToUse = 0.6;
+                }
+                else if(vw >= 1700){
+                    scaleToUse = 0.26;
+                }
+                else if(vw <= 1000){
+                    scaleToUse = 0.13;
+                }
+            }
+            else{
+                if(vw <= 1000){
+                    scaleToUse = 0.34;
+                }
+            }
+            var inversePercent = 100 / scaleToUse;
             $frame.css({
                 width: inversePercent + '%',
                 height: inversePercent + '%',
-                transform: 'scale(' + this.options.scale + ')'
+                transform: 'scale(' + scaleToUse + ')'
             });
 
             // positioning
@@ -232,7 +252,7 @@ border: 1px dotted #e2d5d0;
                         this.loadPreview.bind(this));
                     break;
                 default:
-                    throw 'Prefetch setting not recognized: ' + this.options.prefetch;
+                    throw 'prefetch setting not recognized: ' + this.options.prefetch;
                     break;
             }
         },
@@ -241,7 +261,6 @@ border: 1px dotted #e2d5d0;
             this.$el.find('.' + PREFIX + '-frame')
                 .attr('src', this.$el.attr('href'))
                 .on('load', function() {
-                    // some sites don't set their background color
                     $(this).css('background-color', '#fff');
                 });
         },
@@ -269,9 +288,9 @@ html {
     text-size-adjust: 100%;
 }
 @media screen and (max-width: 1000px) and (orientation: portrait){
-#everything { position: absolute; zoom: 130%;
-	left:720px;
-	top:0px;
+#everything { position: absolute; zoom: 170%;
+	left:-280px;
+	top:200px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
@@ -280,7 +299,7 @@ html {
 #stuff { overflow-y:hidden; overflow-x:hidden; }
 }
 @media screen and (min-width: 1700px) and (orientation: landscape){
-#everything { position: absolute; zoom: 120%;
+#everything { position: absolute; zoom: 125%;
 	left:100px;
 	top:50px; }
 #stuff { overflow-y:hidden; overflow-x:hidden; }
@@ -296,7 +315,7 @@ html {
 #stuff { overflow-y:hidden; overflow-x:hidden; }
 }
 @media screen and (max-width: 1000px) and (orientation: landscape){
-#everything { position: absolute; zoom: 80%; left:-60px; top:10px;}
+#everything { position: absolute; zoom: 65%; left:80px; top:10px;}
 #stuff { overflow-y:hidden; overflow-x:hidden; }
 }
 </style>
