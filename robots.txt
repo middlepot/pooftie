@@ -1,4 +1,0 @@
-# robots.txt for https://pooftie.me
-
-User-agent: ia_archiver
-Disallow: /
