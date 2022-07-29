@@ -579,6 +579,27 @@ html {
 
 
 
+#imglove{
+  transform: translateY(-2%);
+  animation: floater 5s infinite;
+  animation-delay: -1s;
+  transition: ease 0s;
+}
+#imgbase{
+  transform: translateY(-2%);
+  animation: floater 5s infinite;
+  animation-delay: -2s;
+  transition: ease 0s;
+}
+#imgwish{
+  transform: translateY(-2%);
+  animation: floater 5s infinite;
+  animation-delay: -3s;
+  transition: ease 0s;
+}
+
+
+
 @keyframes floater {
   0%{transform: translateY(-2%);transition: ease 0s;}
   50%{transform: translateY(2%);transition: ease 0s;}
@@ -711,6 +732,24 @@ html {
 #frilly a:hover span { position:absolute; display:block; left:315px; top:-65px; }
 #hoverfrilly { position: absolute; left: 0px; top: 0px; opacity:0; transition: opacity .3s; }
 #frilly:hover #hoverfrilly { opacity: 1; transition: opacity .3s; }
+
+
+
+
+#love a span { position:absolute; display:none; z-index:15; }
+#love a:hover span { position:absolute; display:block; left:315px; top:-65px; }
+#hoverlove { position: absolute; left: 0px; top: 0px; opacity:0; transition: opacity .3s; }
+#love:hover #hoverlove { opacity: 1; transition: opacity .3s; }
+
+#base a span { position:absolute; display:none; z-index:15; }
+#base a:hover span { position:absolute; display:block; left:315px; top:-65px; }
+#hoverbase { position: absolute; left: 0px; top: 0px; opacity:0; transition: opacity .3s; }
+#base:hover #hoverbase { opacity: 1; transition: opacity .3s; }
+
+#wish a span { position:absolute; display:none; z-index:15; }
+#wish a:hover span { position:absolute; display:block; left:315px; top:-65px; }
+#hoverwish { position: absolute; left: 0px; top: 0px; opacity:0; transition: opacity .3s; }
+#wish:hover #hoverwish { opacity: 1; transition: opacity .3s; }
 </style>
 
 <div id="everything">
@@ -1010,6 +1049,44 @@ width="250px" height="250px" src="https://i.imgur.com/cDb6Jh6.png"/>
 </div>
 
 </div>
+
+
+
+<div class="divGroup7">
+
+<div id="love" style="position:absolute; left:320px; top:200px;">
+<!--<a class="hoverLink" target="_blank" href="" aria-label="" style="text-decoration: none;">-->
+<style>#imglove{opacity: 1; transition: opacity .3s;} #imglove:hover {opacity: 0.5; transition: opacity .3s;}</style>
+<a class="hoverLink" aria-label="under construction !!">
+<img id="imglove" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+width="250px" height="250px" src="https://i.imgur.com/cBrly5z.png"/>
+<img id="hoverlove" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
+<span><img height="16px" width="16px" src="https://i.imgur.com/9CdJJi5.png"/></span>
+</a>
+</div>
+
+<div id="base" style="position:absolute; left:520px; top:220px;">
+<a class="hoverLink" target="_blank" href="https://base.pooftie.me" aria-label="bαse codes 4 u ♡" style="text-decoration: none;">
+<img id="imgbase" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+width="250px" height="250px" src="https://i.imgur.com/gbaMru5.png"/>
+<img id="hoverbase" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
+<span><img height="16px" width="16px" src="https://i.imgur.com/cRc2lWM.gif"/></span>
+</a>
+</div>
+
+<div id="wish" style="position:absolute; left:720px; top:220px;">
+<!--<a class="hoverLink" target="_blank" href="" aria-label="" style="text-decoration: none;">-->
+<style>#imgwish{opacity: 1; transition: opacity .3s;} #imgwish:hover {opacity: 0.5; transition: opacity .3s;}</style>
+<a class="hoverLink" aria-label="under construction !!">
+<img id="imgwish" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
+width="250px" height="250px" src="https://i.imgur.com/mL9PVKA.png"/>
+<img id="hoverwish" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
+<span><img height="16px" width="16px" src="https://i.imgur.com/9CdJJi5.png"/></span>
+</a>
+</div>
+
+</div>
+
 
 <script>
 var randomDivGroupSelections = [];
