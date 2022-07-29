@@ -756,6 +756,126 @@ html {
 
 <body oncontextmenu="return false" ondragstart="return false" style="background-image:url(https://i.imgur.com/yBDZKPx.png); background-repeat: repeat; overflow: hidden; background-color:#fefbfb; color:#fefbfb; font-family: Verdana; font-size: 10px;">
 
+<div style="position:absolute; left:0px; top:0px; z-index:0;">
+<audio id="musict" preload="true" autoplay loop>
+  <source src="https://file.pooftie.me/a/バーチャル.mp3" type="audio/mpeg">
+</audio>
+<div id="audioplayer">
+<button id="pButton" class="play"></button>
+  <div id="timeline">    
+      <div id="playhead"></div>
+  </div>
+</div>
+
+
+
+<style>
+#pButton{
+    height:200px; 
+    width:200px;
+    border: none;
+    background-repeat: no-repeat;
+    outline:none;
+    cursor: url(https://i.imgur.com/RWCepNL.png), progress;
+}
+
+.play{background: url('https://i.imgur.com/NRFE86e.png');}
+.pause{background: url('https://i.imgur.com/NRFE86e.png') ;}
+</style>
+
+
+
+
+
+
+<script>
+var music = document.getElementById('musict');
+var duration = music.duration;
+var pButton = document.getElementById('pButton');
+var playhead = document.getElementById('playhead');
+var timeline = document.getElementById('timeline');
+
+var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+pButton.addEventListener("click", play);
+
+music.addEventListener("timeupdate", timeUpdate, false);
+
+timeline.addEventListener("click", function(event) {
+    moveplayhead(event);
+    music.currentTime = duration * clickPercent(event);
+}, false);
+
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
+}
+
+playhead.addEventListener('mousedown', mouseDown, false);
+window.addEventListener('mouseup', mouseUp, false);
+
+
+var onplayhead = false;
+
+function mouseDown() {
+    onplayhead = true;
+    window.addEventListener('mousemove', moveplayhead, true);
+    music.removeEventListener('timeupdate', timeUpdate, false);
+}
+
+function mouseUp(event) {
+    if (onplayhead == true) {
+        moveplayhead(event);
+        window.removeEventListener('mousemove', moveplayhead, true);
+        music.currentTime = duration * clickPercent(event);
+        music.addEventListener('timeupdate', timeUpdate, false);
+    }
+    onplayhead = false;
+}
+function moveplayhead(event) {
+    var newMargLeft = event.clientX - getPosition(timeline);
+
+    if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+        playhead.style.marginLeft = newMargLeft + "px";
+    }
+    if (newMargLeft < 0) {
+        playhead.style.marginLeft = "0px";
+    }
+    if (newMargLeft > timelineWidth) {
+        playhead.style.marginLeft = timelineWidth + "px";
+    }
+}
+
+function timeUpdate() {
+    var playPercent = timelineWidth * (music.currentTime / duration);
+    playhead.style.marginLeft = playPercent + "px";
+    if (music.currentTime == duration) {
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+
+function play() {
+    if (music.paused) {
+        music.play();
+        pButton.className = "";
+        pButton.className = "pause";
+    } else { 
+        music.pause();
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+
+music.addEventListener("canplaythrough", function() {
+    duration = music.duration;
+}, false);
+
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
+</script>
+</div>
+
 
 <style>
 .dummyDiv:hover{
@@ -1066,11 +1186,11 @@ width="250px" height="250px" src="https://i.imgur.com/cBrly5z.png"/>
 </div>
 
 <div id="base" style="position:absolute; left:520px; top:220px;">
-<a class="hoverLink" target="_blank" href="https://base.pooftie.me" aria-label="bαse codes 4 u ♡" style="text-decoration: none;">
+<a class="hoverLink" target="_blank" href="https://base.pooftie.me" aria-label="bαse codes for you ♡" style="text-decoration: none;">
 <img id="imgbase" onclick="return clickedDivGroup();" style="z-index:3; cursor: url(https://i.imgur.com/RWCepNL.png), progress;"
 width="250px" height="250px" src="https://i.imgur.com/gbaMru5.png"/>
 <img id="hoverbase" class="rotate" style="z-index:-1;" src="https://i.imgur.com/BAiofpY.png"/>
-<span><img height="16px" width="16px" src="https://i.imgur.com/cRc2lWM.gif"/></span>
+<span><img height="16px" width="16px" src="https://i.imgur.com/2pMNfxD.png"/></span>
 </a>
 </div>
 
